@@ -6,10 +6,10 @@ from CsvReader.CSVReader import CsvReader
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.calculator = calculator()
+        self.calculator = calculator.Calculator()
 
     def test_instantiate_calculator(self):
-        self.assertIsInstance(self.calculator, calculator)
+        self.assertIsInstance(self.calculator, calculator.Calculator)
 
     def test_addition(self):
         test_data = CsvReader("testdata/UnitTestAddition.csv").data
