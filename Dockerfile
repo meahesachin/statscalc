@@ -1,5 +1,8 @@
-FROM python:3
+FROM python:3.7
 
-ADD src /src
+ADD . .
+ADD Tests/testdata /testdata
 
-cmd ["python", "./src/calculatorTests.py"]
+run pip install --upgrade pip
+
+cmd ["python", "-m", "unittest", "discover", "-s", "Tests"]
