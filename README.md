@@ -9,5 +9,5 @@ Progress Report:
 
 | Sr No       | To Do       | In Progress | Review      | Done     |
 | ----------- | ----------- |-----------  | ----------- |-----------
-| 1           | Refactor Calculator Code | X
+| 1           | Refactor Calculator Code | || X |
 | 2           | Travis Integration| | | X | 
