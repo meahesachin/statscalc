@@ -1,25 +1,5 @@
 import math
-from Calculator import addition, subtraction
-
-
-def multiplication(a, b):
-    c = float(a)*float(b)
-    return float(c)
-
-
-def division(a, b):
-    c = float(a)/float(b)
-    return float(c)
-
-
-def squared(a):
-    c = float(a) ** 2
-    return c
-
-
-def squareroot(a):
-    c = math.sqrt(a)
-    return float(c)
+from Calculator import addition, subtraction, multiplication, division, squared, squareroot
 
 
 class Calculator:
@@ -37,26 +17,19 @@ class Calculator:
         return self.result
 
     def multiply(self, a, b):
-        self.result = multiplication(a, b)
+        self.result = multiplication.multiplication(a, b)
         return self.result
 
     def divide(self, a, b):
-        if float(b) == 0:
-            return 0
-        self.result = division(a, b)
-        return format(self.result, '.9f')
+        self.result = division.division(a, b)
+        return self.result
 
     def square(self, a):
-        self.result = squared(a)
+        self.result = squared.squared(a)
         return self.result
 
     def sqrt(self, a):
-        self.result = squareroot(int(a))
-        fmt = ""
-        if self.result.is_integer():
-            fmt = ".1f"
-        else:
-            fmt = ".8f"
-        return format(self.result, fmt)
+        self.result = squareroot.squareroot(int(a))
+        return self.result
 
 
