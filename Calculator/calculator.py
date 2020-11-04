@@ -1,10 +1,5 @@
 import math
-from Calculator import addition
-
-
-def subtraction(a, b):
-    c = float(a)-float(b)
-    return float(c)
+from Calculator import addition, subtraction
 
 
 def multiplication(a, b):
@@ -38,7 +33,7 @@ class Calculator:
         return self.result
 
     def subtract(self, a, b):
-        self.result = subtraction(a, b)
+        self.result = subtraction.subtraction(a, b)
         return self.result
 
     def multiply(self, a, b):
