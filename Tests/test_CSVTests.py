@@ -12,13 +12,13 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.calculator, calculator.Calculator)
 
     def test_addition(self):
-        test_data = CsvReader("testdata/UnitTestAddition.csv").data
+        test_data = CsvReader("Tests/testdata/UnitTestAddition.csv").data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.add(float(row['Value 2']), float(row['Value 1'])), result)
 
     def test_subtraction(self):
-        test_data = CsvReader("testdata/UnitTestSubtraction.csv").data
+        test_data = CsvReader("Tests/testdata/UnitTestSubtraction.csv").data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.subtract(float(row['Value 2']), float(row['Value 1'])), result)
@@ -28,13 +28,13 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.result, 3)
 
     def test_multiply(self):
-        test_data = CsvReader("testdata/UnitTestMultiplication.csv").data
+        test_data = CsvReader("Tests/testdata/UnitTestMultiplication.csv").data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.multiply(float(row['Value 2']), float(row['Value 1'])), result)
 
     def test_divide(self):
-        test_data = CsvReader("testdata/UnitTestDivision.csv").data
+        test_data = CsvReader("Tests/testdata/UnitTestDivision.csv").data
         for row in test_data:
             result = format(float(row['Result']), '.9f')
             # print('Result is: ' + result)
@@ -44,13 +44,13 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.divide(6, 0), 0)
 
     def test_square(self):
-        test_data = CsvReader("testdata/UnitTestSquare.csv").data
+        test_data = CsvReader("Tests/testdata/UnitTestSquare.csv").data
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.square(row['Value 1']), result)
 
     def test_sqrt(self):
-        test_data = CsvReader("testdata/UnitTestSquareRoot.csv").data
+        test_data = CsvReader("Tests/testdata/UnitTestSquareRoot.csv").data
         for row in test_data:
             fmt = ".8f"
             result = float(row['Result'])
