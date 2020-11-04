@@ -1,9 +1,5 @@
 import math
-
-
-def addition(a, b):
-    c = float(a) + float(b)
-    return float(c)
+from Calculator import addition
 
 
 def subtraction(a, b):
@@ -38,7 +34,7 @@ class Calculator:
         pass
 
     def add(self, a, b):
-        self.result = addition(a, b)
+        self.result = addition.addition(a, b)
         return self.result
 
     def subtract(self, a, b):
