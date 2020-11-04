@@ -41,7 +41,8 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.divide(row['Value 2'], row['Value 1']), result)
 
     def test_dividebyzero(self):
-        self.assertEqual(self.calculator.divide(6, 0), 0)
+        self.assertRaises(ZeroDivisionError, self.calculator.divide, 1,0)
+        # self.assertEqual(self.calculator.divide(6, 0), 0)
 
     def test_square(self):
         test_data = CsvReader("Tests/testdata/UnitTestSquare.csv").data
