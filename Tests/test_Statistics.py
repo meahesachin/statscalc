@@ -20,6 +20,9 @@ class MyTestCase(unittest.TestCase):
         my_list = [1, 2, 3, 4]
         self.assertEqual(self.stats.median(my_list), '2.500000000')
 
+    def test_Mode(self):
+        my_list = [4, 1, 2, 2, 3, 5]
+        self.assertEqual(self.stats.mode(my_list), [2])
 """
 
     def test_addition(self):
