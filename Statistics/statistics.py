@@ -4,6 +4,7 @@ from Statistics.Median import median
 from Statistics.Mode import mode
 from Statistics.Variance import variance
 from Statistics.StandardDeviation import stddev
+from Statistics.ZScore import zscore
 
 
 class Statistics(Calculator):
@@ -30,5 +31,13 @@ class Statistics(Calculator):
 
     def stddev(self, nums):
         self.data = stddev(nums)
+        return self.data
+
+    def stddev(self, nums):
+        self.data = stddev(nums)
+        return self.data
+
+    def zscore(self, nums):
+        self.data = zscore(nums)
         return self.data
 

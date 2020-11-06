@@ -32,6 +32,10 @@ class MyTestCase(unittest.TestCase):
         my_list = [4, 8, 6, 5, 3, 2, 8, 9, 2, 5]
         self.assertEqual(self.stats.stddev(my_list), '2.40000000')
 
+    def test_zscore(self):
+        my_list = [1, 2, 3]
+        self.assertEqual(self.stats.zscore(my_list), [-1.44949, -0.44949, 0.55051])
+
 """
 
     def test_addition(self):
