@@ -2,6 +2,7 @@ from Calculator.calculator import Calculator
 from Statistics.SampleMean import mean
 from Statistics.Median import median
 from Statistics.Mode import mode
+from Statistics.Variance import variance
 
 
 class Statistics(Calculator):
@@ -20,4 +21,8 @@ class Statistics(Calculator):
 
     def mode(self, nums):
         self.data = mode(nums)
+        return self.data
+
+    def variance(self, nums):
+        self.data = variance(nums)
         return self.data

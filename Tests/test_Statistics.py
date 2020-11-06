@@ -23,6 +23,11 @@ class MyTestCase(unittest.TestCase):
     def test_Mode(self):
         my_list = [4, 1, 2, 2, 3, 5]
         self.assertEqual(self.stats.mode(my_list), [2])
+
+    def test_variance(self):
+        my_list = [4, 8, 6, 5, 3, 2, 8, 9, 2, 5]
+        self.assertEqual(self.stats.variance(my_list), '5.760000000')
+
 """
 
     def test_addition(self):
