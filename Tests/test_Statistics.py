@@ -28,6 +28,10 @@ class MyTestCase(unittest.TestCase):
         my_list = [4, 8, 6, 5, 3, 2, 8, 9, 2, 5]
         self.assertEqual(self.stats.variance(my_list), '5.760000000')
 
+    def test_stddev(self):
+        my_list = [4, 8, 6, 5, 3, 2, 8, 9, 2, 5]
+        self.assertEqual(self.stats.stddev(my_list), '2.40000000')
+
 """
 
     def test_addition(self):

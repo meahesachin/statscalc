@@ -2,7 +2,8 @@ import math
 
 
 def squareroot(a):
-    c = math.sqrt(a)
+
+    c = math.sqrt(float(a))
 
     fmt = ""
     if c.is_integer():
