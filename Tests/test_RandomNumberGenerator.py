@@ -31,6 +31,7 @@ class RNGTestCase(unittest.TestCase):
         state = random.getstate()
         result = self.randomgenerator.ListofNumWithSeed(0, 10, state)
         result2 = self.randomgenerator.ListofNumWithSeed(0, 10, state)
+        self.assertEqual(result, result2)
         pprint("test_ListofNumWithSeed ")
         pprint(result)
         pprint(result2)
@@ -39,15 +40,21 @@ class RNGTestCase(unittest.TestCase):
         self.randomgenerator.getSeed()
         state = random.getstate()
         result = self.randomgenerator.selectRandomItemFromList(0, 10, state)
+        result2 = self.randomgenerator.selectRandomItemFromList(0, 10, state)
+        self.assertEqual(result, result2)
         pprint("test_selectRandomItemFromList ")
         pprint(result)
+        pprint(result2)
 
     def test_selectRepeatRandomItemFromList(self):
         self.randomgenerator.getSeed()
         state = random.getstate()
         result = self.randomgenerator.selectRandomItemFromListwithSeed(0, 5, state)
+        result2 = self.randomgenerator.selectRandomItemFromListwithSeed(0, 5, state)
+        self.assertEqual(result, result2)
         pprint("test_selectRepeatRandomItemFromList ")
         pprint(result)
+        pprint(result2)
 
     def test_selectNitemsFromListNoSeed(self):
         N = 3
@@ -60,5 +67,8 @@ class RNGTestCase(unittest.TestCase):
         self.randomgenerator.getSeed()
         state = random.getstate()
         result = self.randomgenerator.selectNitemsFromListWithSeed(0,10,N, state)
+        result2 = self.randomgenerator.selectNitemsFromListWithSeed(0, 10, N, state)
+        self.assertEqual(result, result2)
         pprint("test_selectNitemsFromListWithSeed ")
         pprint(result)
+        pprint(result2)
