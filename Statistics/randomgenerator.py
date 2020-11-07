@@ -4,7 +4,7 @@ from Statistics.RandomNumberWithSeed import randomnumberwithseed
 from Statistics.getSeed import getseed
 from Statistics.ListofNumWithSeed import listofNumWithSeed
 from Statistics.SelectRandItemFromList import selectRandomItemFromList
-from Statistics.selectRandomItemFromListwithSeed import selectRandomItemFromListwithSeed
+from Statistics.SelectRandomItemFromListwithSeed import selectRandomItemFromListwithSeed
 class RandomGenerator:
     def __init__(self):
         pass
