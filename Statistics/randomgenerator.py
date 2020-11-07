@@ -6,6 +6,7 @@ from Statistics.ListofNumWithSeed import listofNumWithSeed, listofNumNoSeed
 from Statistics.SelectRandItemFromList import selectRandomItemFromList
 from Statistics.SelectRandomItemFromListwithSeed import selectRandomItemFromListwithSeed
 from Statistics.SelectNItemsfromListNoSeed import selectNItemsFromListNoSeed
+from Statistics.SelectNItemsfromListWithSeed import selectNItemsFromListWithSeed
 class RandomGenerator:
     def __init__(self):
         pass
@@ -39,4 +40,9 @@ class RandomGenerator:
     def selectNitemsFromListNoSeed(self,a,b, N):
         list = listofNumNoSeed(a, b)
         self.result = selectNItemsFromListNoSeed(list, N)
+        return list, self.result
+
+    def selectNitemsFromListWithSeed(self,a,b, N, state):
+        list = self.ListofNumWithSeed(a, b, state)
+        self.result = selectNItemsFromListWithSeed(list, N, state)
         return list, self.result
