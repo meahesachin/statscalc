@@ -3,7 +3,7 @@ from Calculator import calculator
 from pprint import pprint
 from Statistics.populationsampling import PopulationSampling
 import random
-class RNGTestCase(unittest.TestCase):
+class PopSamplingTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.populationsampling = PopulationSampling()
 
@@ -15,4 +15,10 @@ class RNGTestCase(unittest.TestCase):
         N= 3
         result = self.populationsampling.simple_random_sampling(0,10,N)
         pprint("test_Simple_Random_Sampling")
+        pprint(result)
+
+    def test_Confidence_Intervalfor95(self):
+        N =5
+        result = self.populationsampling.confidence_interval_95(0,20,N)
+        pprint("test_Confidence_Intervalfor95")
         pprint(result)
