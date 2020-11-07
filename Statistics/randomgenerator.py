@@ -4,6 +4,9 @@ from Statistics.RandomNumberWithSeed import randomnumberwithseed
 from Statistics.getSeed import getseed
 from Statistics.ListofNumWithSeed import listofNumWithSeed
 class RandomGenerator:
+    def __init__(self):
+        pass
+
     def GenRandNumNoSeed(self, a , b):
         self.result = randomnumbernoseed(a, b)
         return self.result
