@@ -1,5 +1,4 @@
 import random
-from Statistics.RandomNumberWithSeed import randomnumberwithseed
 def listofNumWithSeed(a, b, seed):
     random.seed(seed)
     list = []
