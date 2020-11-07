@@ -14,3 +14,6 @@ class RNGTestCase(unittest.TestCase):
     def test_GenRandNumNoSeed(self):
         result = self.randomgenerator.GenRandNumNoSeed(0, 255)
         pprint(result)
+    def test_GenRandNumWithSeed(self):
+        result = self.randomgenerator.GenRandNumWithSeed(0, 255)
+        pprint(result)
