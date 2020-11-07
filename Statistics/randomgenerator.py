@@ -2,7 +2,7 @@ import random
 from Statistics.RandomNumberNoSeed import randomnumbernoseed
 from Statistics.RandomNumberWithSeed import randomnumberwithseed
 from Statistics.getSeed import getseed
-
+from Statistics.ListofNumWithSeed import listofNumWithSeed
 class RandomGenerator:
     def GenRandNumNoSeed(self, a , b):
         self.result = randomnumbernoseed(a, b)
@@ -14,4 +14,8 @@ class RandomGenerator:
         return self.result
     def getSeed(self):
         self.result = getseed()
+        return self.result
+    def ListofNumWithSeed(self, a, b):
+        seed = getseed()
+        self.result = listofNumWithSeed(a,b, seed)
         return self.result
