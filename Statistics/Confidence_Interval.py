@@ -4,24 +4,24 @@ from Statistics.SampleMean import mean
 from Statistics.StandardDeviation import stddev
 from Calculator.squareroot import squareroot
 
-def confidence_intervalUpper(data,z,N):
+def confidence_intervalUpper(sample,z,N):
 
 
-    sample = simple_rand_sampling(data, N)
+    #sample = simple_rand_sampling(data, N)
 
-    z = float(z)
+    #z = float(z)
     sample_mean = float(mean(sample))
     stddeviation = float(stddev(sample))
-    rootN = float(squareroot(N))
+    rootN = (N**.5)
     return round(sample_mean + (z*(stddeviation/rootN)), 5)
 
-def confidence_intervalLower(data,z,N):
+def confidence_intervalLower(sample,z,N):
 
 
-    sample = simple_rand_sampling(data, N)
+    #sample = simple_rand_sampling(data, N)
 
-    z= float(z)
+    #z= float(z)
     sample_mean = float(mean(sample))
     stddeviation = float(stddev(sample))
-    rootN = float(squareroot(N))
+    rootN = (N**.5)
     return round(sample_mean - (z*(stddeviation/rootN)), 5)

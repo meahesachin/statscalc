@@ -18,8 +18,10 @@ class PopSamplingTestCase(unittest.TestCase):
         pprint(result)
 
     def test_Confidence_Intervalfor95(self):
-        N =5
+        N = 5
         z =1.960
         result = self.populationsampling.confidence_interval(0,20,z,N)
         pprint("test_Confidence_Intervalfor95")
         pprint(result)
+
+
