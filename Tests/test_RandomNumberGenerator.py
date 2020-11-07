@@ -15,16 +15,35 @@ class RNGTestCase(unittest.TestCase):
         result = self.randomgenerator.GenRandNumNoSeed(0, 255)
         pprint(result)
     def test_GenRandNumWithSeed(self):
-        result = self.randomgenerator.GenRandNumWithSeed(0, 255)
+        self.randomgenerator.getSeed()
+        state = random.getstate()
+        result = self.randomgenerator.GenRandNumWithSeed(0, 255, state)
+        result2 = self.randomgenerator.GenRandNumWithSeed(0, 255, state)
+        self.assertEqual(result, result2)
         pprint(result)
+        pprint(result2)
+
 
     def test_ListofNumWithSeed(self):
-        result = self.randomgenerator.ListofNumWithSeed(0, 10)
+        self.randomgenerator.getSeed()
+        state = random.getstate()
+        result = self.randomgenerator.ListofNumWithSeed(0, 10, state)
+        result2 = self.randomgenerator.ListofNumWithSeed(0, 10, state)
         pprint(result)
+        pprint(result2)
+
     def test_selectRandomItemFromList(self):
-        result = self.randomgenerator.selectRandomItemFromList(0, 10)
+        self.randomgenerator.getSeed()
+        state = random.getstate()
+        result = self.randomgenerator.selectRandomItemFromList(0, 10, state)
         pprint(result)
 
     def test_selectRepeatRandomItemFromList(self):
-        result = self.randomgenerator.selectRandomItemFromListwithSeed(0, 5)
+        self.randomgenerator.getSeed()
+        state = random.getstate()
+        result = self.randomgenerator.selectRandomItemFromListwithSeed(0, 5, state)
+        pprint(result)
+
+    def test_selectNitemsFromListNoSeed(self):
+        result = self.randomgenerator.selectNitemsFromListNoSeed(0,10,3)
         pprint(result)
