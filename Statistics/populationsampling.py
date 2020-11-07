@@ -1,7 +1,7 @@
 
 from Statistics.ListofNumWithSeed import listofNumNoSeed
 from Statistics.SimpleRandomSampling import simple_rand_sampling
-from Statistics.Confidence_Interval_95 import confidence_interval_95Upper, confidence_interval_95Lower
+from Statistics.Confidence_Interval import confidence_intervalUpper, confidence_intervalLower
 
 class PopulationSampling:
     def __init__(self):
@@ -12,10 +12,10 @@ class PopulationSampling:
         self.result = simple_rand_sampling(sample, N)
         return sample, self.result
 
-    def confidence_interval_95(self,a,b, N):
+    def confidence_interval(self,a,b,z, N):
         data = listofNumNoSeed(a, b)
-        self.upper = confidence_interval_95Upper(data, N)
-        self.lower = confidence_interval_95Lower(data, N)
+        self.upper = confidence_intervalUpper(data, z,N)
+        self.lower = confidence_intervalLower(data, z,N)
 
 
         return self.lower, self.upper
