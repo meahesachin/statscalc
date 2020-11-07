@@ -1,9 +1,10 @@
-import random
+
 from Statistics.RandomNumberNoSeed import randomnumbernoseed
 from Statistics.RandomNumberWithSeed import randomnumberwithseed
 from Statistics.getSeed import getseed
 from Statistics.ListofNumWithSeed import listofNumWithSeed
 from Statistics.SelectRandItemFromList import selectRandomItemFromList
+from Statistics.selectRandomItemFromListwithSeed import selectRandomItemFromListwithSeed
 class RandomGenerator:
     def __init__(self):
         pass
@@ -25,7 +26,13 @@ class RandomGenerator:
         return self.result
 
     def selectRandomItemFromList(self,a, b):
-        seed = getseed()
-        list = listofNumWithSeed(a,b, seed)
+        list = self.ListofNumWithSeed(a, b)
         self.result = selectRandomItemFromList(list)
-        return self.result
+        return list, self.result
+
+    def selectRandomItemFromListwithSeed(self, a, b):
+
+        repeatslist = self.ListofNumWithSeed(0, 10)
+        'seed = getseed()'
+        self.result = selectRandomItemFromListwithSeed(a,b,repeatslist)
+        return repeatslist, self.result

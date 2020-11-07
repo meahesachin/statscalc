@@ -24,3 +24,7 @@ class RNGTestCase(unittest.TestCase):
     def test_selectRandomItemFromList(self):
         result = self.randomgenerator.selectRandomItemFromList(0, 10)
         pprint(result)
+
+    def test_selectRepeatRandomItemFromList(self):
+        result = self.randomgenerator.selectRandomItemFromListwithSeed(0, 5)
+        pprint(result)
