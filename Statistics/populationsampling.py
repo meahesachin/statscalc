@@ -14,8 +14,9 @@ class PopulationSampling:
 
     def confidence_interval(self,a,b,z, N):
         data = listofNumNoSeed(a, b)
-        self.upper = confidence_intervalUpper(data, z,N)
-        self.lower = confidence_intervalLower(data, z,N)
+        sample = simple_rand_sampling(data, N)
+        self.upper = confidence_intervalUpper(sample, z,N)
+        self.lower = confidence_intervalLower(sample, z,N)
 
 
-        return self.lower, self.upper
+        return sample, self.lower, self.upper
