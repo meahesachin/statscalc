@@ -28,15 +28,54 @@ Project Outline:
             1. Methods
                1. Subtract 2 numbers
                
-2. Random Generator Object
+2. Random Generator Class
     1. Properties
         1. Result
     2. Methods
-        1. Generate a random number without a seed -> calls GenRandNumNoSeed static method
-        2. Generate a random number with a seed -> calls GenRandNumWithSeed static method
-        3. Generate a list of N random numbers with a seed ->calls ListofNumWithSeed static method
-        4. Select a random item from a list->calls selectRandomItemFromList static method
-        5. Set a seed and randomly and select the same value from a list->calls selectRandomItemFromListwithSeed static method
-        6. Select N number of items from a list without a seed->calls selectNitemsFromListNoSeed static method
-        7. Select N number of items from a list with a seed->calls selectNitemsFromListWithSeed static method
-        
+        1. GenRandNumNoSeed -> calls randomnumbernoseed static method
+        2. GenRandNumWithSeed -> calls randomnumberwithseed static method
+        3. getSeed -> calls getseed static method
+        4. ListofNumWithSeed ->calls listofNumWithSeed static method
+        5. selectRandomItemFromList-> calls ListofNumWithSeed and selectRandomItemFromList static method
+        6. selectRandomItemFromListwithSeed ->calls ListofNumWithSeed and selectRandomItemFromListwithSeed static method
+        7. selectNitemsFromListNoSeed -> calls listofNumNoSeed and selectNItemsFromListNoSeed static method
+        8. selectNitemsFromListWithSeed -> calls ListofNumWithSeed and selectNItemsFromListWithSeed static method
+    3. Random Operations Static Class
+        1. Methods
+            1. randint -> generate a random integer between a range of numbers
+            2. setstate -> sets the seed for the random generator
+            3. seed -> generates a seed
+            4. choice -> select a random item from a set
+            5. choices -> select number of items from a set
+    4. Static Methods
+        1. randomnumbernoseed
+            1. Methods
+                1. calls random.randint function from random class
+                
+        2. randomnumberwithseed
+            1. Methods
+                1. calls random.setstate from random class
+                1. calls random.randint function from random class
+        3. getSeed
+            1. Methods
+                1.  calls random.seed from random class
+        4. ListofNumWithSeed
+            1. Methods
+                1.  calls random.setstate from random class
+                2. create empty list
+                2. run a for loop
+                3. each iteration of the loop generate a random integer
+                4. append integer to list
+        5. selectRandomItemFromList
+            1. Methods
+                1.  calls random.choice from random class
+        6. selectRandomItemFromListwithSeed
+            1. Methods
+                1.  calls random.choice from random class
+        7. selectNitemsFromListNoSeed
+            1. Methods
+                1.  calls random.random.choices from random class
+        8. selectNitemsFromListWithSeed
+            1. Methods
+                1.  calls random.setstate from random class
+                2. calls random.choices from random class
