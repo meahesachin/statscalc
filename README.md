@@ -50,8 +50,7 @@ Project Outline:
     4. Static Methods
         1. randomnumbernoseed
             1. Methods
-                1. calls random.randint function from random class
-                
+                1. calls random.randint function from random class           
         2. randomnumberwithseed
             1. Methods
                 1. calls random.setstate from random class
