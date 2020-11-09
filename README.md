@@ -5,6 +5,7 @@ Travis Build Status:
 [![Build Status](https://travis-ci.com/meahesachin/statscalc.svg?branch=main)](https://travis-ci.com/meahesachin/statscalc)
 
 
+
 Project Outline:
 
 1. Calculator Object
@@ -79,3 +80,6 @@ Project Outline:
             1. Methods
                 1.  calls random.setstate from random class
                 2. calls random.choices from random class
+
+Statistics Calculator by: Sachin Adbe & Mervin Bernales
+
