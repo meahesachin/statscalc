@@ -58,7 +58,7 @@ Project Outline:
                 1. calls random.randint function from random class
         3. getSeed
             1. Methods
-                1.  calls random.seed from random class
+                1. calls random.seed from random class
         4. ListofNumWithSeed
             1. Methods
                 1.  calls random.setstate from random class
@@ -68,16 +68,16 @@ Project Outline:
                 4. append integer to list
         5. selectRandomItemFromList
             1. Methods
-                1.  calls random.choice from random class
+                1. calls random.choice from random class
         6. selectRandomItemFromListwithSeed
             1. Methods
-                1.  calls random.choice from random class
+                1. calls random.choice from random class
         7. selectNitemsFromListNoSeed
             1. Methods
-                1.  calls random.random.choices from random class
+                1. calls random.random.choices from random class
         8. selectNitemsFromListWithSeed
             1. Methods
-                1.  calls random.setstate from random class
+                1. calls random.setstate from random class
                 2. calls random.choices from random class
 3. Population Sampling Class
     1. Properties
