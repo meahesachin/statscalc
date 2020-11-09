@@ -1,9 +1,9 @@
-
+from Calculator.calculator import Calculator
 from Statistics.ListofNumWithSeed import listofNumNoSeed
 from Statistics.SimpleRandomSampling import simple_rand_sampling
 from Statistics.Confidence_Interval import confidence_intervalUpper, confidence_intervalLower
 from Statistics.MarginOfError import margin_of_error
-class PopulationSampling:
+class PopulationSampling(Calculator):
     def __init__(self):
         pass
 

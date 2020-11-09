@@ -1,4 +1,4 @@
-
+from Calculator.calculator import Calculator
 from Statistics.RandomNumberNoSeed import randomnumbernoseed
 from Statistics.RandomNumberWithSeed import randomnumberwithseed
 from Statistics.getSeed import getseed
@@ -7,7 +7,7 @@ from Statistics.SelectRandItemFromList import selectRandomItemFromList
 from Statistics.SelectRandomItemFromListwithSeed import selectRandomItemFromListwithSeed
 from Statistics.SelectNItemsfromListNoSeed import selectNItemsFromListNoSeed
 from Statistics.SelectNItemsfromListWithSeed import selectNItemsFromListWithSeed
-class RandomGenerator:
+class RandomGenerator(Calculator):
     def __init__(self):
         pass
 
