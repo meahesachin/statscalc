@@ -24,4 +24,9 @@ class PopSamplingTestCase(unittest.TestCase):
         pprint("test_Confidence_Intervalfor95")
         pprint(result)
 
-
+    def test_MOE_for95(self):
+        N =5
+        z = 1.960
+        result = self.populationsampling.margin_of_error(0,20,z,N)
+        pprint("test_MOE_for95")
+        pprint(result)
