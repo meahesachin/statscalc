@@ -79,3 +79,23 @@ Project Outline:
             1. Methods
                 1.  calls random.setstate from random class
                 2. calls random.choices from random class
+3. Population Sampling Class
+    1. Properties
+        1. Result
+    2. Methods
+        1. simple_random_sampling -> calls listofNumNoSeed and simple_rand_sampling static methods
+        2. confidence_interval -> calls listofNumNoSeed,simple_rand_sampling, confidence_intervalUpper, and confidence_intervalLower static methods
+        3. margin_of_error -> calls listofNumNoSeed, simple_rand_sampling, and margin_of_error static methods
+    3. Static Methods
+        1. simple_rand_sampling
+            1. Methods
+                1. calls random.sample from random class
+        2. confidence_intervalUpper
+            1. Methods
+                1. calls mean and stddev static methods from statistics class
+        3. confidence_intervalLower
+            1. Methods
+                1. calls mean and stddev static methods from statistics class
+        4. margin_of_error
+            1. Methods
+                1. calls stddev static method from statistics class
