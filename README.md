@@ -15,7 +15,9 @@ Project Outline:
         1. Addition -> Calls addition static method from math operations
         2. Subtraction -> Call subtraction static method from Math operations
         3. Multiplication -> Call multiplication static method from Math operations
-        3. Division -> Call division static method from Math operations
+        4. Division -> Call division static method from Math operations
+        5. Square -> Call squared static method 
+        5. SquareRoot -> Call squareroot static method.
     3. Math Operations Static Class 
         1. Methods
             1. Addition -> Calls addition class method of sum
@@ -24,7 +26,6 @@ Project Outline:
         1. Addition
             1. Methods 
                 1. Sum 1 numbers
-                1. Sum List of numbers
         2. Subtraction
             1. Methods
                1. Subtract 2 numbers
@@ -99,3 +100,33 @@ Project Outline:
         4. margin_of_error
             1. Methods
                 1. calls stddev static method from statistics class
+3. Statistics Class
+    1. Properties
+        1. data -> list
+    2. Methods
+        1. mean -> calls mean static method
+        2. median -> calls median static method
+        3. mode -> calls mode static method
+        4. variance -> calls variance static method
+        5. stddev -> calls stddev static method
+        6. zscore -> calls zscore static method
+    3. Static Methods
+        1. mean
+            1. Methods
+                1. Uses division from Calculator package to calculate [mean.](https://www.investopedia.com/terms/a/arithmeticmean.asp)
+        2. median
+            1. Methods
+                1. Uses addition, subtraction and division from Calculator package to calculate [median.](https://www.investopedia.com/terms/m/median.asp)
+        3. mode
+            1. Methods
+                1. Uses counter to calculate [mode.](https://www.investopedia.com/terms/m/mode.asp)
+        4. variance
+            1. Methods
+                1. uses division, square and sample mean to calculate [variance.](https://www.investopedia.com/terms/v/variance.asp)
+        5. stddev
+            1. Methods
+                1. use squareroot from Calculator and variance to calculate [standard deviation.](https://www.investopedia.com/terms/s/standarddeviation.asp).
+        4. zscore
+            1. Methods
+                1. uses mean and standard deviation to calculate [Zscore.`](https://www.investopedia.com/terms/z/zscore.asp).
+        
